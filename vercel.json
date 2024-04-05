@@ -2,12 +2,12 @@
     "version": 2,
     "routes": [
       {
-        "src": "/submit",
-        "headers": { "Access-Control-Allow-Origin": "https://bpskotamojokerto.github.io" }
+        "src": "/submit(.*)",
+        "headers": { "Access-Control-Allow-Origin": "https://bpskotamojokerto.github.io/SiMoniK" }
       },
       {
         "src": "/rekap(.*)",
-        "headers": { "Access-Control-Allow-Origin": "https://bpskotamojokerto.github.io" }
+        "headers": { "Access-Control-Allow-Origin": "https://bpskotamojokerto.github.io/SiMoniK" }
       }
     ]
 }
