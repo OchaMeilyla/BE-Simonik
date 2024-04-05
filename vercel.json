@@ -3,13 +3,25 @@
     "routes": [
       {
         "src": "/submit(.*)",
-        "headers": { "Access-Control-Allow-Origin": "https://bpskotamojokerto.github.io/SiMoniK" }
+        "methods": ["POST"],
+        "dest": "/api/submit",
+        "headers": {
+          "Access-Control-Allow-Origin": "https://bpskotamojokerto.github.io",
+          "Access-Control-Allow-Methods": "POST",
+          "Access-Control-Allow-Headers": "Content-Type"
+        }
       },
       {
         "src": "/rekap(.*)",
-        "headers": { "Access-Control-Allow-Origin": "https://bpskotamojokerto.github.io/SiMoniK" }
+        "methods": ["GET", "DELETE", "PUT"],
+        "dest": "/api/rekap",
+        "headers": {
+          "Access-Control-Allow-Origin": "https://bpskotamojokerto.github.io",
+          "Access-Control-Allow-Methods": "GET, DELETE, PUT",
+          "Access-Control-Allow-Headers": "Content-Type"
+        }
       }
     ]
-}
+  }
   
   
