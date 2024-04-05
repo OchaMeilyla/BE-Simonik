@@ -1,15 +1,16 @@
 {
     "version": 2,
-    "builds": [
-      {
-        "src": "index.js",
-        "use": "@now/node"
-      }
-    ],
     "routes": [
       {
-        "src": "/(.*)",
-        "dest": "index.js"
+        "src": "/submit",
+        "methods": ["POST"],
+        "headers": { "Access-Control-Allow-Origin": "https://bpskotamojokerto.github.io/SiMoniK" }
+      },
+      {
+        "src": "/rekap",
+        "methods": ["GET", "DELETE", "PUT"],
+        "headers": { "Access-Control-Allow-Origin": "https://bpskotamojokerto.github.io/SiMoniK" }
       }
     ]
   }
+  
