@@ -1,21 +1,12 @@
 const express = require("express");
 const path = require("path");
 const cors = require("cors");
-const allowedOrigins = ["https://bpskotamojokerto.github.io"];
 const connection = require("./app/models/database");
 const mainRouter = require("./app/routeMain");
 const app = express();
-const corsOptions = {
-  origin: function (origin, callback) {
-    if (allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error("Not allowed by CORS"));
-    }
-  },
-};
 
-app.use(cors(corsOptions));
+
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
