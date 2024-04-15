@@ -4,12 +4,12 @@
       {
         "src": "/submit",
         "methods": ["POST"],
-        "headers": { "Access-Control-Allow-Origin": "https://bpskotamojokerto.github.io/SiMoniK" }
+        "headers": { "Access-Control-Allow-Origin": "https://bpskotamojokerto.github.io" }
       },
       {
         "src": "/rekap",
         "methods": ["GET", "DELETE", "PUT"],
-        "headers": { "Access-Control-Allow-Origin": "https://bpskotamojokerto.github.io/SiMoniK" }
+        "headers": { "Access-Control-Allow-Origin": "https://bpskotamojokerto.github.io" }
       }
     ]
   }
