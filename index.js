@@ -6,11 +6,12 @@ const mainRouter = require("./app/routeMain");
 const app = express();
 
 
+// Set up CORS middleware
 app.use(cors({
-  origin: 'https://bpskotamojokerto.github.io/SiMoniK'
+  origin: 'https://bpskotamojokerto.github.io/SiMoniK',
+  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Sesuaikan metode yang diperlukan
+  allowedHeaders: ['Content-Type', 'Authorization'], // Sesuaikan header yang diperlukan
 }));
-app.use(express.json());
-app.use(express.urlencoded({extended: false}));
 
 // http router
 app.use(mainRouter);
