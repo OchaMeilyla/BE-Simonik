@@ -6,8 +6,6 @@ const mainRouter = require("./app/routeMain");
 const app = express();
 
 app.use(cors());
-app.use(express.json());
-app.use(express.urlencoded({extended: false}));
 
 // http router
 app.use(mainRouter);
