@@ -5,13 +5,9 @@ const connection = require("./app/models/database");
 const mainRouter = require("./app/routeMain");
 const app = express();
 
-
-// Set up CORS middleware
-app.use(cors({
-  origin: 'https://bpskotamojokerto.github.io',
-  methods: ['GET', 'POST', 'PUT', 'DELETE'], // Sesuaikan metode yang diperlukan
-  allowedHeaders: ['Content-Type', 'Authorization'], // Sesuaikan header yang diperlukan
-}));
+app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
 
 // http router
 app.use(mainRouter);
@@ -19,7 +15,7 @@ app.use("/static", express.static(path.join(__dirname, "static")));
 app.set("views", path.join(__dirname, "./static"));
 
 
-const port = process.env.PORT || 3000;
+const port = 3000;
 app.listen(port, function () {
   console.log("Server started on", port);
   connection
