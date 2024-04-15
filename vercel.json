@@ -1,15 +1,13 @@
 {
-    "version": 2,
-    "routes": [
+    "headers": [
       {
-        "src": "/rekap",
-        "methods": ["GET", "OPTIONS"],
-        "headers": {
-          "Access-Control-Allow-Origin": "https://bpskotamojokerto.github.io",
-          "Access-Control-Allow-Methods": "GET",
-          "Access-Control-Allow-Headers": "Content-Type"
-        },
-        "dest": "/index.js"
+        "source": "/api/(.*)",
+        "headers": [
+          {
+            "key": "Access-Control-Allow-Origin",
+            "value": "*"
+          }
+        ]
       }
     ]
   }
